@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LancamentosModule } from './pages/lancamentos/lancamentos.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { LancamentosModule } from './pages/lancamentos/lancamentos.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LancamentosModule
+    LancamentosModule,
+    BrowserAnimationsModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

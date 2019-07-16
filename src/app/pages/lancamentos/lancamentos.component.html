@@ -1,3 +1,38 @@
-<div *ngIf="lancamentosData">
-    <p>lancamentos works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Lancamentos Legado Dashboard</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="wrapper">
+    <mat-grid-list 
+        [cols]="cols | async"
+        rowHeight="400px"
+        gutterSize="16px">
+    
+        <mat-grid-tile>
+            grafico 1
+        </mat-grid-tile>
+    
+        <mat-grid-tile>
+            grafico 2
+        </mat-grid-tile>
+    
+        <mat-grid-tile [colspan]="cols | async">
+    
+            <table mat-table [dataSource]="dataSource | async" matSort class="mat-elevation-z8"> 
+                <ng-container 
+                    *ngFor="let column of displayedColumns"
+                    [matColumnDef]="column">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                </ng-container>
+                          
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+    
+        </mat-grid-tile>
+    
+    </mat-grid-list>
 </div>

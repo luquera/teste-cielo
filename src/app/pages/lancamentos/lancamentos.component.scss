@@ -1,0 +1,20 @@
+.wrapper{
+    margin: auto;
+    padding: 16px;
+    max-width: 1280px;
+}
+
+.mat-table{
+    width: 100%;
+    margin: 0 16px;
+
+    .mat-cell {
+        min-height: auto;
+        padding: 16px 24px 16px 0px;
+
+        &:first-child{
+            padding-left: 24px;
+        }
+    }
+}
+
