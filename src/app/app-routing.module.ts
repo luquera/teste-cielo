@@ -4,7 +4,8 @@ import { LancamentosComponent } from './pages/lancamentos/lancamentos.component'
 
 
 const routes: Routes = [
-  { path: '', component: LancamentosComponent }
+  { path: '', redirectTo: 'lancamentos', pathMatch: 'full' },
+  { path: 'lancamentos', loadChildren: () => import('./pages/lancamentos/lancamentos.module').then(m => m.LancamentosModule) }
 ];
 
 @NgModule({
