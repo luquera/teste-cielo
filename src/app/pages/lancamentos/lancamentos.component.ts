@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LancamentosService } from 'src/app/services/lancamentos/lancamentos.service';
+import { BaseLancamentos } from 'src/app/interfaces/base-lancamentos.interface';
 
 @Component({
   selector: 'app-lancamentos',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LancamentosComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public lancamentosService: LancamentosService
+  ) { }
+
+  public lancamentosData: BaseLancamentos;
 
   ngOnInit() {
+    this.lancamentosService
+      .getLancamentos()
+      .subscribe((data: BaseLancamentos) => this.lancamentosData = data)
   }
 
 }
