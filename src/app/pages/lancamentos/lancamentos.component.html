@@ -7,15 +7,14 @@
 <div class="wrapper">
     <mat-grid-list 
         [cols]="cols | async"
-        rowHeight="400px"
         gutterSize="16px">
-    
+
         <mat-grid-tile>
-            <app-lancamentos-grafico-b></app-lancamentos-grafico-b>
+            <app-lancamentos-grafico-a [lancamentosData]="lancamentosData"></app-lancamentos-grafico-a>
         </mat-grid-tile>
     
         <mat-grid-tile>
-            <app-lancamentos-grafico-a></app-lancamentos-grafico-a>
+            <app-lancamentos-grafico-b [lancamentosData]="lancamentosData"></app-lancamentos-grafico-b>
         </mat-grid-tile>
     
         <mat-grid-tile [colspan]="cols | async">
