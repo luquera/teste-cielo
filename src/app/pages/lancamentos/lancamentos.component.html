@@ -11,27 +11,15 @@
         gutterSize="16px">
     
         <mat-grid-tile>
-            grafico 1
+            <app-lancamentos-grafico-b></app-lancamentos-grafico-b>
         </mat-grid-tile>
     
         <mat-grid-tile>
-            grafico 2
+            <app-lancamentos-grafico-a></app-lancamentos-grafico-a>
         </mat-grid-tile>
     
         <mat-grid-tile [colspan]="cols | async">
-    
-            <table mat-table [dataSource]="dataSource | async" matSort class="mat-elevation-z8"> 
-                <ng-container 
-                    *ngFor="let column of displayedColumns"
-                    [matColumnDef]="column">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>
-                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-                </ng-container>
-                          
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-    
+            <app-lancamentos-tabela [lancamentosData]="lancamentosData"></app-lancamentos-tabela>
         </mat-grid-tile>
     
     </mat-grid-list>

@@ -1,0 +1,13 @@
+
+.mat-table{
+    width: 100%;
+
+    .mat-cell {
+        min-height: auto;
+        padding: 16px 24px 16px 0px;
+
+        &:first-child{
+            padding-left: 24px;
+        }
+    }
+}

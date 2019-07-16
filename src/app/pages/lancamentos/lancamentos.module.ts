@@ -7,10 +7,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material';
+import { ChartsModule } from 'ng2-charts';
+import { LancamentosGraficoAComponent } from './lancamentos-grafico-a/lancamentos-grafico-a.component';
+import { LancamentosGraficoBComponent } from './lancamentos-grafico-b/lancamentos-grafico-b.component';
+import { LancamentosTabelaComponent } from './lancamentos-tabela/lancamentos-tabela.component';
 
 @NgModule({
   declarations: [
-    LancamentosComponent
+    LancamentosComponent,
+    LancamentosGraficoAComponent,
+    LancamentosGraficoBComponent,
+    LancamentosTabelaComponent
   ],
   imports: [
     RouterModule.forChild([
@@ -21,7 +28,8 @@ import { MatSortModule } from '@angular/material';
     MatIconModule,
     MatGridListModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    ChartsModule
   ],
   exports: [
     LancamentosComponent
