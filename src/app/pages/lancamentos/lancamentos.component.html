@@ -1,3 +1,25 @@
-<div *ngIf="lancamentosData">
-    <p>lancamentos works!</p>
-</div>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Lancamentos Legado</span>
+        <mat-icon aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list 
+    #grid
+    [cols]="cols | async"
+    rowHeight="400px">
+
+    <mat-grid-tile>
+        grafico 1
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        grafico 2
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="cols | async">
+        tabela
+    </mat-grid-tile>
+
+</mat-grid-list>
