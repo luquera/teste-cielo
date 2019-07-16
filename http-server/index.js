@@ -12,6 +12,6 @@ http.createServer((req, res) => {
         res.write(data)
         res.end();
     })
-}).listen(8000, () => {
-    console.log('Server Online na porta 8000')
+}).listen(3000, () => {
+    console.log('Server Online na porta 3000')
 })
