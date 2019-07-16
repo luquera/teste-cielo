@@ -4,7 +4,7 @@ import { LancamentosComponent } from './lancamentos.component';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { LancamentosRoutingModule } from './lancamentos-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +12,9 @@ import { LancamentosRoutingModule } from './lancamentos-routing.module';
     LancamentosComponent
   ],
   imports: [
-    LancamentosRoutingModule,
+    RouterModule.forChild([
+      { path: '', component: LancamentosComponent }
+    ]),
     CommonModule,
     MatToolbarModule,
     MatIconModule,
