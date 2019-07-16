@@ -8,6 +8,7 @@ Antes de tudo obrigado pela oportunidade! Vamos ao que interessa.
   - TypeScript
   - SCSS
 - Angular Material
+- Chart.js
 - Nodejs
 - NPM
 
